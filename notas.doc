@@ -11,3 +11,16 @@ https://www.ibm.com/docs/es/rational-soft-arch/9.6.1?topic=page-asynchronous-jav
 - In React will work with functions dont used getElemntByID.
 - Hooks - useState.
 - Variables
+- Json
+- Datos => BD 
+- Componentes => Servidor Web - Registro - Editar - Eliminar
+- PHP, Node Js => Bakend Servidores.
+- Biblioteca => MySql => PHP
+
+
+- Buscador global en spotify
+- Home + selector de artistas mínimo 10.
+- Al seleccionar el artista que traiga las canciones de este.
+- Que  traiga el banner del artista.
+- Axios-
+- Request en Python 

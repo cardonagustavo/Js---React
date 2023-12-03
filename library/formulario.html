@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="./CSS/bootstrap.css">
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+<body class="row vh-100 justify-content-center align-items-center">
+    <div id="form" class="col-3 p-3 border border-2 border-dark rounded-5 bg-info bg-gradient">
+        <h1 class="text-center">REGISTRO DE LIBROS</h1>
+        <form action="../library/PHP/registro.php" method="POST">
+            <div class="mb-3">
+                <label class="form-label">LIBRO</label>
+                <input type="text" class="form-control" name="libro">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">ESCRITOR</label>
+                <input type="text" class="form-control" name="escritor">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">DESCRIPCION</label>
+                <input type="text" class="form-control" name="descripcion">
+            </div>
+            <button type="submit" class="btn-12" ><span>Registrar</span> </a></button>
+      </form>
+    </div>
+
+
+    <script src="./JS/bootstrap.js"></script>
+</body>
+</html>
