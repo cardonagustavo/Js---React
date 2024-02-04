@@ -1,0 +1,226 @@
+body {
+  margin: 0;
+  padding: 0;  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: ce;
+
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(to bottom right, #ddbaba, #96a3bd);
+  
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.numberCellsContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.numberCell {
+  margin-right: 10px;
+}
+
+.input {
+  width: 70px; 
+  text-align: center;
+  border-radius: 5px;
+  border: 2px solid #000000; 
+  padding: 10px; 
+  margin: 0 5px; 
+}
+
+.button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 0 5px; 
+}
+
+.disabledButton {
+  background-color: #ccc;
+  color: #666;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: not-allowed;
+  margin: 0 5px; 
+}
+
+.message {
+  font-size: 20px;
+  color: #3498db; 
+  font-weight: bold;
+}
+
+.generateButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  cursor: pointer;
+  width: 180px;
+  height: 50px;
+  background-image: linear-gradient(to top, #D8D9DB 0%, #fff 80%, #FDFDFD 100%);
+  border-radius: 30px;
+  border: 1px solid #8F9092;
+  transition: all 0.2s ease;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #606060;
+  text-shadow: 0 1px #fff;
+}
+
+.generateButton:hover {
+  box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 3px 3px #CECFD1;
+}
+
+.generateButton:active {
+  box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 5px 3px #999, inset 0 0 30px #aaa;
+}
+
+.generateButton:focus {
+  box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 5px 3px #999, inset 0 0 30px #aaa;
+}
+
+.restartButton {
+  height: 50px;
+  width: 200px;
+  position: relative;
+  background-color: transparent;
+  cursor: pointer;
+  border: 2px solid #252525;
+  overflow: hidden;
+  border-radius: 30px;
+  color: #333;
+  transition: all 0.5s ease-in-out;
+}
+
+.btn-txt {
+  z-index: 1;
+  font-weight: 800;
+  letter-spacing: 4px;
+}
+
+.restartButton::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: all 0.5s ease-in-out;
+  background-color: #333;
+  border-radius: 30px;
+  visibility: hidden;
+  height: 10px;
+  width: 10px;
+  z-index: -1;
+}
+
+.restartButton:hover {
+  box-shadow: 1px 1px 200px #0d5a36;
+  color: #fff;
+  border: none;
+}
+
+.restartButton:hover::after {
+  visibility: visible;
+  transform: scale(100) translateX(2px);
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.lost {
+  font-size: 25px;
+  color: #dd2606;
+  font-weight: bold;
+  animation: fadeInOut 3s ease-in-out; 
+}
+
+@keyframes fireworks {
+  0% {
+    transform: translateY(-100vh);
+    opacity: 0;
+  }
+  10% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  20% {
+    transform: translateY(-50vh);
+    opacity: 0.8;
+  }
+  30% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  40% {
+    transform: translateY(-25vh);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  60% {
+    transform: translateY(-12.5vh);
+    opacity: 0.4;
+  }
+  70% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  80% {
+    transform: translateY(-6.25vh);
+    opacity: 0.2;
+  }
+  90% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-3.125vh);
+    opacity: 0;
+  }
+}
+
+.fireworks {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #ffcc00;
+  border-radius: 50%;
+  box-shadow: 0 0 20px #ffcc00;
+  animation: fireworks 2s ease-out forwards;
+}
